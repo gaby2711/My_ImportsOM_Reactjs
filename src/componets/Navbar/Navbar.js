@@ -1,15 +1,16 @@
-import "./Navbar.css"
+import CartWidget from "../CartWidget/CartWidget"
+import { Link } from "react-router-dom"
 
 const Navbar = () =>{
     return(
-        <nav className="Navbar">
-            <h1>My Imports OM</h1>
-            <ul>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+
+        <nav style={{display: "flex", justifyContent: "space-around"}}>
+            <h1>Katys Beuaty</h1>
+        <div>
+        <Link to='/category/Ofertas' style={{margin:10}}>Ofertas</Link>
+        <Link to='/category/Hogar'>Hogar</Link>
+        </div>
+        <CartWidget/>
         </nav>
     )
 }
